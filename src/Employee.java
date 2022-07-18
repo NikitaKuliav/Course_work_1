@@ -1,4 +1,5 @@
 public class Employee {
+
     private final String name;
     private final String surname;
     private final String patronymic;
@@ -6,7 +7,7 @@ public class Employee {
     private int salary;
 
     private final int id;
-    private static int counter;
+    private static int counter = 1;
 
 
     public Employee(String name, String surname, String patronymic, int department, int salary) {
@@ -15,12 +16,9 @@ public class Employee {
         this.patronymic = patronymic;
         this.department = department;
         this.salary = salary;
-        this.id = getCounter();
+        this.id = counter++;
     }
-    private int getCounter() {
-        counter++;
-        return counter;
-    }
+
     public String getName() {
         return name;
     }
